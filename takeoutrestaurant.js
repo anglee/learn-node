@@ -20,6 +20,9 @@ var handleResult = function(err, result, time) {
   }
 };
 
-takeout.order(-1, handleResult);
+for (var i = 0; i < 10; ++i) {
+  console.log("Placing order #" + i);
+  takeout.order(i, handleResult);
+}
 
 console.log("------")
